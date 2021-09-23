@@ -10,7 +10,7 @@ spring:
 
 eureka:
   instance:
-    hostname: locahost
+    hostname: 192.168.1.11
   client:
     registerWithEureka: false
     fetchRegistry: false
