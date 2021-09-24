@@ -1,0 +1,11 @@
+server:
+  port: 8082
+
+spring:
+  mongodb:
+    data:
+      username: spring
+      password: spring
+      host: localhost
+      port: 27017
+      database: SpringMGDB
