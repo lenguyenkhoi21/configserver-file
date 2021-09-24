@@ -9,3 +9,19 @@ spring:
       host: localhost
       port: 27017
       database: SpringMGDB
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
