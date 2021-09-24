@@ -1,6 +1,12 @@
 server:
   port: 8081
 
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
 eureka:
   instance:
     preferIpAddress: true
