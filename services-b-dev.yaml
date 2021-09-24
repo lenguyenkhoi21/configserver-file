@@ -2,8 +2,8 @@ server:
   port: 8082
 
 spring:
-  mongodb:
-    data:
+  data:
+    mongodb:
       username: spring
       password: spring
       host: localhost
