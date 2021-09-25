@@ -6,7 +6,7 @@ spring:
     gateway:
       routes:
         - id : services-a
-          uri : http://localhost:8081/
+          uri : lb://services-a
           predicates:
             - Path=/services-a/**
 
