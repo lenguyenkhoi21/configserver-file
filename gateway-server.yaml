@@ -9,6 +9,8 @@ spring:
           uri : lb://services-a
           predicates:
             - Path=/services-a/**
+          filters:
+            - RewritePath=/services-a/(?<path>.*), /$\{path}
 
 eureka:
   instance:
