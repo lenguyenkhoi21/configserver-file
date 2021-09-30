@@ -21,6 +21,7 @@ resilience4j:
           - java.io.IOException
           - java.util.concurrent.TimeoutException
           - org.springframework.web.client.ResourceAccessException
+          - java.lang.IllegalStateException
   ratelimiter:
     instances:
       services-b:
