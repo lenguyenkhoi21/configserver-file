@@ -16,7 +16,7 @@ spring:
           predicates:
             - Path=/services-b/**
           filters:
-            - RewritePath=/services-a/(?<path>.*), /$\{path}
+            - RewritePath=/services-b/(?<path>.*), /$\{path}
 
 eureka:
   instance:
