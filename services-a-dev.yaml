@@ -7,6 +7,45 @@ spring:
       ribbon:
         enabled: false
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      services-b:
+        registerHealthIndicator: true
+        ringBufferSizeInClosedState: 5
+        ringBufferSizeInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        recordExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+          - org.springframework.web.client.ResourceAccessException
+  ratelimiter:
+    instances:
+      services-b:
+        limitForPeriod: 5
+        limitRefreshPeriod: 5000
+        timeoutDuration: 1000ms
+  retry:
+    instances:
+      retryServices-b:
+        maxRetryAttempts: 5
+        waitDuration: 10000
+        retry-exceptions:
+          - java.util.concurrent.TimeoutException
+  bulkhead:
+    instances:
+      bulkheadServices-b:
+        maxWaitDuration: 2ms
+        maxConcurrentCalls: 20
+  thread-pool-bulkhead:
+    instances:
+      bulkheadServices-b:
+        maxThreadPoolSize: 1
+        coreThreadPoolSize: 1
+        queueCapacity: 1
+
 eureka:
   instance:
     preferIpAddress: true
