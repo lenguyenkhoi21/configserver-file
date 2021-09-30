@@ -35,6 +35,7 @@ resilience4j:
         waitDuration: 10000
         retry-exceptions:
           - java.util.concurrent.TimeoutException
+          - java.lang.IllegalStateException
   bulkhead:
     instances:
       bulkheadServices-b:
