@@ -9,6 +9,9 @@ spring:
 
 resilience4j:
   circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
     instances:
       services-b:
         registerHealthIndicator: true
@@ -23,6 +26,9 @@ resilience4j:
           - org.springframework.web.client.ResourceAccessException
           - java.lang.IllegalStateException
   ratelimiter:
+    configs:
+      default:
+        registerHealthIndicator: true
     instances:
       services-b:
         limitForPeriod: 5
