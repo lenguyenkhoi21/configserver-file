@@ -58,6 +58,11 @@ eureka:
       defaultZone: http://localhost:8888/eureka/
 
 management:
+  health:
+    circuitbreakers:
+      enabled: true
+    ratelimiters:
+      enabled: true
   endpoints:
     web:
       exposure:
