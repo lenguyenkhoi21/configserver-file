@@ -18,7 +18,7 @@ resilience4j:
         ringBufferSizeInClosedState: 5
         ringBufferSizeInHalfOpenState: 3
         waitDurationInOpenState: 10s
-        failureRateThreshold: 100
+        failureRateThreshold: 50
         recordExceptions:
           - org.springframework.web.client.HttpServerErrorException
           - java.io.IOException
