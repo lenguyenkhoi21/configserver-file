@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+api:
+  keycloak: https://localhost:8443
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
