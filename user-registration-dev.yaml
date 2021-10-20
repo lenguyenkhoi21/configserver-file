@@ -4,6 +4,7 @@ server:
 api:
   keycloak: 
     domain: https://localhost:8443
+    grant_type: password
     admin: milugod
     password: LeNguyenKhoi21
     clientID: admin-cli
