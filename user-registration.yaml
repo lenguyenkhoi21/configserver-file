@@ -2,7 +2,11 @@ server:
   port: 8083
 
 api:
-  keycloak: https://localhost:8443
+  keycloak: 
+    domain: https://localhost:8443
+    admin: milugod
+    password: LeNguyenKhoi21
+    clientID: admin-cli
 
 eureka:
   instance:
