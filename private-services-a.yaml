@@ -4,7 +4,7 @@ server:
 keycloak:
   realm : myrealm
   auth-server-url: http://localhost:8080/auth/
-  ssl-required: external
+  ssl-required: none
   resource : test-client
   credentials:
     secret : 5d629844-2ea0-4cd9-94c8-88d087089010
