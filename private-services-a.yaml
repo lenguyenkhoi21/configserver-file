@@ -9,7 +9,8 @@ keycloak:
   credentials:
     secret : 5d629844-2ea0-4cd9-94c8-88d087089010
   use-resource-role-mappings : true
-
+  bearer-only : true
+  
 eureka:
   instance:
     preferIpAddress: true
