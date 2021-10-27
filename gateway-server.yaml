@@ -5,8 +5,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id : services-a
-          uri : lb://services-a
+        - id: services-a
+          uri: lb://services-a
           predicates:
             - Path=/services-a/**
           filters:

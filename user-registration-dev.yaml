@@ -8,7 +8,7 @@ api:
     admin: milugod
     password: LeNguyenKhoi21
     clientID: admin-cli
-    realm : myrealm
+    realm: myrealm
 
 eureka:
   instance:
