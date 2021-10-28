@@ -2,6 +2,11 @@ server:
   port: 8081
 
 spring:
+  zipkin:
+    baseURL: https://192.168.99.100:9411/
+  sleuth:
+    sampler:
+      percentage: 1
   cloud:
     loadbalancer:
       ribbon:
