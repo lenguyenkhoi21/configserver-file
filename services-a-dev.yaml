@@ -12,10 +12,6 @@ spring:
       ribbon:
         enabled: false
 
-logging:
-  level:
-    root: "DEBUG"
-
 resilience4j:
   circuitbreaker:
     configs:

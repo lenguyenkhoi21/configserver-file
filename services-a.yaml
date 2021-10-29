@@ -12,10 +12,6 @@ spring:
       ribbon:
         enabled: false
 
-logging:
-  level:
-    root: "DEBUG"
-
 eureka:
   instance:
     preferIpAddress: true
