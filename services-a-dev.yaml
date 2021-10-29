@@ -2,10 +2,19 @@ server:
   port: 8081
 
 spring:
+  zipkin:
+    baseURL: http://localhost:9411/
+  sleuth:
+    sampler:
+      percentage: 1
   cloud:
     loadbalancer:
       ribbon:
         enabled: false
+
+logging:
+  level:
+    root: "DEBUG"
 
 resilience4j:
   circuitbreaker:
