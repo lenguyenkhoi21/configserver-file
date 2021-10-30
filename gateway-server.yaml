@@ -21,7 +21,7 @@ spring:
 
 logging:
   level:
-    com.exmaple.com.example.gateway: debug
+    com.example.gateway: debug
 
 eureka:
   instance:
