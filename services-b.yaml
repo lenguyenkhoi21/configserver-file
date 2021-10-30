@@ -9,10 +9,6 @@ spring:
       host: localhost
       port: 27017
       database: SpringMGDB
-  cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false
 
 eureka:
   instance:

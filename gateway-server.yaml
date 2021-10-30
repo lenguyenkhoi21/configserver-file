@@ -19,6 +19,10 @@ spring:
           filters:
             - RewritePath=/services-a/(?<path>.*), /$\{path}
 
+logging:
+  level:
+    com.exmaple.com.example.gateway: debug
+
 eureka:
   instance:
     preferIpAddress: true
