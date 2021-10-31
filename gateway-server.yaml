@@ -20,7 +20,8 @@ spring:
             - RewritePath=/services-a/(?<path>.*), /$\{path}
 
 logstash:
-  url: 192.168.1.11:5000
+  host: 192.168.1.11
+  port: 5000
 
 logging:
   level:
