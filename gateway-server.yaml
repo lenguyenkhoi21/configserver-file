@@ -19,14 +19,13 @@ spring:
           filters:
             - RewritePath=/services-a/(?<path>.*), /$\{path}
 
+logstash:
+  url: 192.168.1.11:5000
+
 logging:
   level:
     com.example.gateway: debug
-  logstash:
-    enabled: true
-    url: 192.168.1.11:5000
-
-
+    
 eureka:
   instance:
     preferIpAddress: true
