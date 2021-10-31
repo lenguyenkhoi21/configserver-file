@@ -2,6 +2,13 @@ server:
   port: 8082
 
 spring:
+  zipkin:
+    baseURL: http://localhost:9411/
+  sleuth:
+    sampler:
+      probability: 1
+    reactor:
+      instrumentation-type: MANUAL
   data:
     mongodb:
       username: spring
@@ -9,6 +16,10 @@ spring:
       host: localhost
       port: 27017
       database: SpringMGDB
+
+logging:
+  level:
+    com.example.servicesb: DEBUG
 
 eureka:
   instance:
