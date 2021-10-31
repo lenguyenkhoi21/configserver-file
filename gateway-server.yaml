@@ -19,6 +19,9 @@ spring:
           filters:
             - RewritePath=/services-a/(?<path>.*), /$\{path}
 
+logstash:
+  domain: 192.168.1.11:5000
+
 logging:
   level:
     com.example.gateway: debug
