@@ -22,6 +22,7 @@ spring:
 logstash:
   host: 192.168.1.11
   port: 5000
+  queue-size: 512
 
 logging:
   level:
