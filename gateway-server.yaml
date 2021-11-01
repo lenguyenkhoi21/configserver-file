@@ -25,7 +25,6 @@ logstash:
   queuesize: 512
 
 logging:
-  config: http://localhost:8071/gateway-server/default/master/gateway-log-config.xml
   level:
     com.example.gateway: debug
     
