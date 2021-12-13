@@ -2,13 +2,13 @@ server:
   port: 8090
 
 spring:
-  zipkin:
-    baseURL: http://localhost:9411/
-  sleuth:
-    sampler:
-      probability: 1
-    reactor:
-      instrumentation-type: MANUAL
+  # zipkin:
+  #   baseURL: http://localhost:9411/
+  # sleuth:
+  #   sampler:
+  #     probability: 1
+  #   reactor:
+  #     instrumentation-type: MANUAL
   cloud:
     gateway:
       routes:
@@ -19,13 +19,13 @@ spring:
           filters:
             - RewritePath=/services-a/(?<path>.*), /$\{path}
 
-logstash:
-  host: localhost
-  port: 5000
+# logstash:
+#   host: localhost
+#   port: 5000
 
-logging:
-  level:
-    com.example.gateway: debug
+# logging:
+#   level:
+#     com.example.gateway: debug
     
 eureka:
   instance:
@@ -34,7 +34,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://eureka-server:8888/eureka/
 
 management:
   endpoints:
