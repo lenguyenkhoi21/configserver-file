@@ -1,0 +1,24 @@
+keycloak:
+  realm: myrealm
+  auth-server-url: http://localhost:8080/auth/
+  ssl-required: none
+  resource: test-client
+  credentials:
+    secret: 5d629844-2ea0-4cd9-94c8-88d087089010
+  use-resource-role-mappings: true
+  bearer-only: false
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
