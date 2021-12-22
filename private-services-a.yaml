@@ -1,6 +1,3 @@
-server:
-  port: 8084
-
 keycloak:
   realm: myrealm
   auth-server-url: http://localhost:8080/auth/
